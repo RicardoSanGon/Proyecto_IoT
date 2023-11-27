@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Aplicacion_IoT"
+rootProject.name = "MCDA"
 include(":app")
  

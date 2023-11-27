@@ -1,4 +1,4 @@
-package com.example.aplicacion_iot;
+package com.example.mcda;
 
 import org.junit.Test;
 
