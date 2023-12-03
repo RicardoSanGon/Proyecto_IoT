@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Historial_PaquetesController;
 use App\Http\Controllers\PaquetesController;
 use App\Http\Controllers\UsuariosController;
 use Illuminate\Http\Request;
@@ -22,5 +23,7 @@ Route::prefix('v1')->group(function (){
     Route::get('/info/pack/sensor',[PaquetesController::class,'index']);
     Route::post('/create/pack',[PaquetesController::class,'store']);
     Route::put('/update/pack/{id}',[PaquetesController::class,'update']);
+
+    Route::get('/info/pack/historial/{id}',[Historial_PaquetesController::class,'index']);
 })
 ->middleware(['status.verify','token.verify']);
