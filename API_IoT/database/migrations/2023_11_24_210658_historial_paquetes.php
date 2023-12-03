@@ -20,7 +20,7 @@ return new class extends Migration
             $table->double('datos_sensor_temperatura');
             $table->double('datos_sensor_conductividad');
             $table->double('datos_sensor_nivel_agua');
-            $table->foreignId('usuario_id')->references('id')->on('usuarios');
+            $table->foreignId('user_id')->references('id')->on('users');
             $table->foreignId('paquete_id')->references('id')->on('paquetes');
             $table->timestamp('fecha_hora');
         });
