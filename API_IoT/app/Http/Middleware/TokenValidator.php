@@ -24,7 +24,7 @@ class TokenValidator
             JWTAuth::parseToken($token)->authenticate();
         }
         catch (\Exception $e){
-            return response()->json(['msg'=>'Token invalido','error'=>$e->getMessage()],404);
+            return response()->json(['msg'=>'Token invalido'],404);
         }
         return $next($request);
     }

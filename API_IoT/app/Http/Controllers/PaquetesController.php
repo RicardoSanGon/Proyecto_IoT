@@ -19,7 +19,7 @@ class PaquetesController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
 
-        protected $aio_key="aio_SBcS73PeGdgkiVtkIIvcxZgBZtBA";
+        protected $aio_key="aio_JdyM03qZAwMKB0easBjXgDjdGEJl";
         protected $aio_username="ricardo_sanchz";
     public function index(Request $request)
     {
@@ -60,12 +60,12 @@ class PaquetesController extends Controller
             return response()->json(['msg'=>'No se encontro el paquete'],404);
         if($pack->status===0)
             return response()->json(['msg'=>'El paquete esta desactivado'],400);
-        $pack->datos_sensor_ph=$sensor['ph'];
-        $pack->datos_sensor_turbidez=$sensor['turbidez'];
-        $pack->datos_sensor_temperatura=$sensor['temperatura'];
-        $pack->datos_sensor_conductividad=$sensor['conductividad'];
-        $pack->datos_sensor_nivel_agua=$sensor['nivel-agua'];
-        $pack->fecha_hora=$sensor['fecha'];
+        $pack->datos_sensor_conductividad=$sensor[0];
+        $pack->datos_sensor_nivel_agua=$sensor[1];
+        $pack->datos_sensor_ph=$sensor[2];
+        $pack->datos_sensor_temperatura=$sensor[3];
+        $pack->datos_sensor_turbidez=$sensor[4];
+        $pack->fecha_hora=$sensor[5];
         $pack->save();
         return response()->json(['msg'=>'Datos actualizados con exito','data'=>$pack],202);
     }
@@ -87,7 +87,7 @@ class PaquetesController extends Controller
     public function getDatos(){
         $response=null;
         $data=[
-            'proyecto-iot.conductividad',
+            'proyecto-iot.conductivdad',
             'proyecto-iot.nivel-agua',
             'proyecto-iot.ph',
             'proyecto-iot.temperatura',
@@ -100,16 +100,17 @@ class PaquetesController extends Controller
             'ph',
             'temperatura',
             'turbidez',
+            'fecha'
         ];
         foreach ($data as $index=>$item){
             $response=Http::get("https://io.adafruit.com/api/v2/{$this->aio_username}/feeds/{$item}/data/last",
                 ['X-AIO-Key'=>$this->aio_key]);
             $sensors[$index]=$response->json('value');
         }
-        $sensors['fecha']=$response->json('updated_at');
-        $sensors['fecha']=Carbon::parse($sensors['fecha'])->setTimezone('UTC');
-        $sensors['fecha']->setTimezone('America/Monterrey');
-        $sensors['fecha']=$sensors['fecha']->format('d/m/Y h:i:s A');
+        $sensors[5]=$response->json('updated_at');
+        $sensors[5]=Carbon::parse($sensors[5])->setTimezone('UTC');
+        $sensors[5]->setTimezone('America/Monterrey');
+        $sensors[5]=$sensors[5]->format('d/m/Y h:i:s A');
         return $sensors;
     }
 }
