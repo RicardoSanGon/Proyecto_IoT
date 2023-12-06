@@ -5,42 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:layout_margin="10dp"
+    android:background="@drawable/fondo"
     >
-    <TextView
-        android:id="@+id/tittle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Manten siempre el control"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:textAlignment="center"
-        android:textSize="30dp"
-        android:fontFamily="@font/belanosimasemibold"
-        android:textColor="@color/md_theme_dark_tertiary"
-        />
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animationView"
-        android:layout_width="wrap_content"
-        android:layout_height="420dp"
-        app:lottie_rawRes="@raw/agua"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        android:layout_below="@id/tittle"
-        android:layout_marginTop="20dp"
-        />
-    <TextView
-        android:id="@+id/MCDA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MCDA"
-        android:layout_centerHorizontal="true"
-        android:textAlignment="center"
-        android:layout_marginTop="20dp"
-        android:textSize="50dp"
-        android:fontFamily="@font/belanosimasemibold"
-        android:textColor="@color/md_theme_dark_tertiary"
-        android:layout_below="@id/animationView"
-        />
 
 </RelativeLayout>

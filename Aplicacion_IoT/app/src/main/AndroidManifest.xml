@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,22 +11,22 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MCDA"
+        android:theme="@style/Theme.PRY_IoT"
         tools:targetApi="31">
         <activity
-            android:name=".SignUp"
+            android:name=".rvhistorial_paq"
+            android:exported="false" />
+        <activity
+            android:name=".paquete"
+            android:exported="false" />
+        <activity
+            android:name=".rvpaquete"
+            android:exported="false" />
+        <activity
+            android:name=".sign_up"
             android:exported="false" />
         <activity
             android:name=".SignIn"
-            android:exported="false" />
-        <activity
-            android:name=".sensores_info"
-            android:exported="false" />
-        <activity
-            android:name=".Paquetes"
-            android:exported="false" />
-        <activity
-            android:name=".Welcome"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
