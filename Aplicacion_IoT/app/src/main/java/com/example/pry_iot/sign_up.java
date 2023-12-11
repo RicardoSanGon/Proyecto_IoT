@@ -51,8 +51,6 @@ public class sign_up extends AppCompatActivity {
                 disableEditTextFocus();
                 registerViewModel.registerUser(reguser).observe(this, result -> {
                     Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
-
-                    // Accede a la información del usuario si el registro fue exitoso
                     if (result.equals("Usuario creado correctamente")) {
                         Intent intent = new Intent(sign_up.this, SignIn.class);
                         startActivity(intent);

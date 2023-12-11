@@ -38,7 +38,6 @@ public class RegisterRepository {
                 registerResult.setValue("Error de red: " + t.getMessage());
             }
         });
-
         return registerResult;
     }
 }
