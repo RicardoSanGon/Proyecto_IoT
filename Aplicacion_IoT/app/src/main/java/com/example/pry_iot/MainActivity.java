@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onFinish() {
-            Intent intent = new Intent(MainActivity.this, SignIn.class);
+            Intent intent = new Intent(MainActivity.this, sign_up.class);
             startActivity(intent);
         }
     }.start();

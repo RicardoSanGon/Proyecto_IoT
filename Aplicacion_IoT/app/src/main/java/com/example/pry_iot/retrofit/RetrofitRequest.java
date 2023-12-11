@@ -9,7 +9,7 @@ public class RetrofitRequest {
     public static Retrofit getRetrofitInstance() {
         if (retrofit == null) {
             retrofit = new retrofit2.Retrofit.Builder()
-                    .baseUrl(BASE_URL)
+                    .baseUrl("https://dodo-loving-likely.ngrok-free.app}")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         } return retrofit;

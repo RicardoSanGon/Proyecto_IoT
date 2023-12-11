@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".sign_up"
-    android:gravity="center"
-    android:background="@drawable/fondosignin"
-    android:orientation="vertical">
+    tools:context=".RegPaquete"
+    android:background="@drawable/fondo_amarillo"
+    android:orientation="vertical"
+    android:gravity="center">
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,14 +24,14 @@
             android:padding="25dp">
 
             <TextView
-                android:id="@+id/tvuno"
+                android:id="@+id/tvnompaq"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/amaranthbold"
-                android:text="Registrarse"
+                android:text="Nuevo paquete"
                 android:textAlignment="center"
                 android:textSize="35dp"
-                android:textColor="@color/md_theme_light_primary"
+                android:textColor="@color/md_theme_light_inverseSurface"
                 />
 
             <EditText
@@ -39,53 +40,34 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
                 android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/usuario"
+                android:drawableLeft="@drawable/caja"
                 android:fontFamily="@font/signikaregular"
-                android:hint=" User Name"
+                android:hint=" Nombre del Paquete"
                 android:inputType="text"
                 android:textColor="@color/material_dynamic_neutral20"
                 />
             <EditText
-                android:id="@+id/etemail"
+                android:id="@+id/etlugar"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="5dp"
                 android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/email"
+                android:drawableLeft="@drawable/lugar"
                 android:fontFamily="@font/signikaregular"
-                android:hint=" Email"
+                android:hint=" Lugar"
                 android:inputType="text"
                 android:textColor="@color/material_dynamic_neutral20"
                 />
 
-            <EditText
-                android:id="@+id/etcontra"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="5dp"
-                android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/cerrar"
-                android:fontFamily="@font/signikaregular"
-                android:hint=" Password"
-                android:inputType="textPassword" />
-
-            <EditText
-                android:id="@+id/etcontra_confirmacion"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="5dp"
-                android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/cerrar"
-                android:fontFamily="@font/signikaregular"
-                android:hint="Password_confirmation"
-                android:inputType="textPassword" />
 
             <Button
-                android:id="@+id/btninicarsesion"
+                android:id="@+id/btnagregar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
-                android:text="Registrarse" />
+                android:text="Agregar"
+                android:backgroundTint="@color/md_theme_light_inverseSurface"
+                />
 
         </LinearLayout>
 
