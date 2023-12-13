@@ -96,6 +96,7 @@ class PaquetesController extends Controller
         else
             return response()->json(['msg'=>'Error al actualizar el led'],$response->status());
     }
+    //Linea para subir cambios
 
     public function getDatos(){
         $response=null;
