@@ -19,7 +19,7 @@ class PaquetesController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
 
-        protected $aio_key="aio_JdyM03qZAwMKB0easBjXgDjdGEJl";
+        protected $aio_key="aio_ZGIL293JFAIvjFGnD6fkLNsdP01K";
         protected $aio_username="ricardo_sanchz";
     public function index(Request $request)
     {
@@ -54,12 +54,13 @@ class PaquetesController extends Controller
 
     public function update($id)
     {
-        $sensor=$this->getDatos();
+
         $pack=Paquete::find($id);
         if(!$pack)
             return response()->json(['msg'=>'No se encontro el paquete'],404);
         if($pack->status===0)
             return response()->json(['msg'=>'El paquete esta desactivado'],400);
+        $sensor=$this->getDatos();
         $pack->datos_sensor_conductividad=$sensor[0];
         $pack->datos_sensor_nivel_agua=$sensor[1];
         $pack->datos_sensor_ph=$sensor[2];
@@ -82,6 +83,18 @@ class PaquetesController extends Controller
     public function getIdByHeader($header){
         $token=JWTAuth::parseToken($header);
         return $token->getPayload()->get('sub');
+    }
+
+    public function setLed(Request $request)
+    {
+        $response=Http::withHeaders([
+            'X-AIO-Key'=>$this->aio_key
+        ])->post("https://io.adafruit.com/api/v2/{$this->aio_username}/feeds/proyecto-iot.led/data",
+            ['value'=>$request->estado]);
+        if($response->successful())
+            return response()->json(['msg'=>'Led actualizado con exito'],$response->status());
+        else
+            return response()->json(['msg'=>'Error al actualizar el led'],$response->status());
     }
 
     public function getDatos(){

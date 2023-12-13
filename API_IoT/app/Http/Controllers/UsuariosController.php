@@ -48,6 +48,7 @@ class UsuariosController extends Controller
             $url=URL::temporarySignedRoute('verificar',now()->addHours(1),['token'=>$token]);
             Mail::to($request->email)->send(new VericarEmail($request->nombre,$url));
         }catch (\Exception $e){
+            $user->delete();
             return response()->json(['msg'=>'Error al crear el usuario','error'=>$e->getMessage()],500);
         }
 

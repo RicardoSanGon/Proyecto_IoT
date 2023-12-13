@@ -19,7 +19,8 @@ class Historial_PaquetesController extends Controller
     {
         $userId=$this->getIDbyHeader($request->header('Authorization'));
         $historical=HistorialPaquete::where('paquete_id',$id)
-                    ->where('user_id',$userId)->get();
+                    ->where('user_id',$userId)
+                    ->orderBy('fecha_hora','desc')->get();
         return response()->json(['data'=>$historical],200);
     }
 

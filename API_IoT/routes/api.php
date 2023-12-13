@@ -22,4 +22,5 @@ Route::middleware(['status.verify','token.verify'])->group(function (){
     Route::post('/create/pack',[PaquetesController::class,'store']);
     Route::put('/update/pack/{id}',[PaquetesController::class,'update']);
     Route::get('/info/pack/historial/{id}',[Historial_PaquetesController::class,'index']);
+    Route::post('/led/update',[PaquetesController::class,'setLed']);
 });
