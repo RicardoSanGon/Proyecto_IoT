@@ -4,10 +4,207 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".paquete">
+    tools:context=".view.paquete"
+    android:background="@drawable/fondo_paquete"
+    >
     <TextView
+        android:id="@+id/tittle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="SENSORES DEL PAQUETE"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/amaranthbold"
+        android:textSize="28dp"
+        android:textColor="@color/md_theme_dark_inversePrimary"
         />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tittle"
+        android:padding="5dp"
+        >
+        <TableLayout
+            android:id="@+id/tablelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:stretchColumns="1"
+            >
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/line"
+                android:layout_marginTop="1dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="PH"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/amaranthbold"
+                    android:textSize="20dp"
+                    android:textColor="@color/md_theme_light_shadow"
+                    />
+
+                <TextView
+                    android:id="@+id/ph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PH"
+                    android:textAlignment="center"
+                    android:padding="2dp"
+                    android:fontFamily="@font/amaranthbold"
+                    android:textSize="15dp"
+                    android:textColor="@color/md_theme_light_shadow"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/line"
+                android:layout_marginTop="1dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Turbidez"
+                    android:textAlignment="center"
+                    android:padding="7dp"
+                    android:fontFamily="@font/amaranthbold"
+                    android:textSize="20dp"
+                    android:textColor="@color/md_theme_light_shadow"
+                    />
+                <TextView
+                    android:id="@+id/turbidez"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Turbidez"
+                    android:textAlignment="center"
+                    android:padding="2dp"
+                    android:fontFamily="@font/amaranthbold"
+                    android:textSize="15dp"
+                    android:textColor="@color/md_theme_light_shadow"
+
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/line"
+                android:layout_marginTop="1dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Temperatura"
+                    android:textAlignment="center"
+                    android:padding="7dp"
+                    android:fontFamily="@font/amaranthbold"
+                    android:textSize="20dp"
+                    android:textColor="@color/md_theme_light_shadow"
+
+                    />
+                <TextView
+                    android:id="@+id/temperatura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Temperatura"
+                    android:textAlignment="center"
+                    android:padding="2dp"
+                    android:fontFamily="@font/amaranthbold"
+                    android:textSize="15dp"
+                    android:textColor="@color/md_theme_light_shadow"
+
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/line"
+                android:layout_marginTop="1dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Conductividad"
+                    android:textAlignment="center"
+                    android:padding="10dp"
+                    android:fontFamily="@font/amaranthbold"
+                    android:textSize="20dp"
+                    android:textColor="@color/md_theme_light_shadow"
+
+                    />
+                <TextView
+                    android:id="@+id/conductividad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Conductividad"
+                    android:textAlignment="center"
+                    android:padding="7dp"
+                    android:fontFamily="@font/amaranthbold"
+                    android:textSize="15dp"
+                    android:textColor="@color/md_theme_light_shadow"
+
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/line"
+                android:layout_marginTop="1dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nivel_agua"
+                    android:textAlignment="center"
+                    android:padding="2dp"
+                    android:fontFamily="@font/amaranthbold"
+                    android:textSize="20dp"
+                    android:textColor="@color/md_theme_light_shadow"
+
+                    />
+                <TextView
+                    android:id="@+id/nivel_agua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nivel_agua"
+                    android:textAlignment="center"
+                    android:padding="7dp"
+                    android:fontFamily="@font/amaranthbold"
+                    android:textSize="15dp"
+                    android:textColor="@color/md_theme_light_shadow"
+                    />
+            </TableRow>
+        </TableLayout>
+        <Button
+            android:id="@+id/btnhistorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tablelayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Historial"
+            android:fontFamily="@font/amaranthbold"
+            android:textSize="20dp"
+            />
+    </RelativeLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/foco"
+        android:layout_width="166dp"
+        android:layout_height="195dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/md_theme_light_inverseSurface"
+        android:src="@drawable/img_2" />
 
 </RelativeLayout>

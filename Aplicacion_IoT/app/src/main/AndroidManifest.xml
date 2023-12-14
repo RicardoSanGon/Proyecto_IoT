@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -15,25 +14,26 @@
         android:theme="@style/Theme.PRY_IoT"
         tools:targetApi="31">
         <activity
-            android:name=".RegPaquete"
+            android:name=".view.rvhistorial_paq"
             android:exported="false" />
         <activity
-            android:name=".rvhistorial_paq"
+            android:name=".view.paquete"
             android:exported="false" />
         <activity
-            android:name=".paquete"
+            android:name=".view.rvpaquete"
             android:exported="false" />
         <activity
-            android:name=".rvpaquete"
+            android:name=".view.sign_up"
             android:exported="false" />
         <activity
-            android:name=".sign_up"
+            android:name=".view.log_in"
             android:exported="false" />
         <activity
-            android:name=".SignIn"
-            android:exported="false" />
+            android:name=".view.RegistroPaquetes"
+            android:label="Registro de Paquetes">
+        </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

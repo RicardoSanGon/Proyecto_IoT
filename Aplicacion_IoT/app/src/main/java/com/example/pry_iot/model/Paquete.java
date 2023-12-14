@@ -1,8 +1,9 @@
 package com.example.pry_iot.model;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class Paquete {
+public class Paquete implements Serializable {
     private int id;
     private String nombre_paquete;
     private String lugar_paquete;
@@ -12,8 +13,8 @@ public class Paquete {
     private double datos_sensor_conductividad;
     private double datos_sensor_nivel_agua;
     private int user_id;
-    private LocalDateTime fecha_hora;
-    private boolean status;
+    private String fecha_hora;
+    private int status;
 
     public int getId() {
         return id;
@@ -87,19 +88,19 @@ public class Paquete {
         this.user_id = user_id;
     }
 
-    public LocalDateTime getFecha_hora() {
+    public String getFecha_hora() {
         return fecha_hora;
     }
 
-    public void setFecha_hora(LocalDateTime fecha_hora) {
+    public void setFecha_hora(String fecha_hora) {
         this.fecha_hora = fecha_hora;
     }
 
-    public boolean isStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 }

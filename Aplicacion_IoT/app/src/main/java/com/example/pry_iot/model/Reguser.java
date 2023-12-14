@@ -72,4 +72,3 @@ public class Reguser {
         return password.equals(password_confirmation);
     }
 }
-

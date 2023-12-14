@@ -1,5 +1,6 @@
 package com.example.pry_iot.constants;
 
 public class AppConstants {
-    public static final String BASE_URL = "https://sdsq0pmc-8000.usw3.devtunnels.ms/api";
+    //public static final String BASE_URL = "https://full-close-stallion.ngrok-free.app/api/";
+    public static final String BASE_URL = "https://full-close-stallion.ngrok-free.app/api/";
 }

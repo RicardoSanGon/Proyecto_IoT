@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/hpfondo"
+    android:layout_margin="10dp">
+
+
+    <LinearLayout
+        android:id="@+id/sup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/inf"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@drawable/line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PH"
+                android:textSize="25sp"
+                android:textColor="@color/md_theme_dark_background"
+                android:fontFamily="@font/signikasemibold"
+                />
+
+            <TextView
+                android:id="@+id/dataph"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="30sp"
+                android:textColor="@color/md_theme_dark_background"
+                android:fontFamily="@font/signikasemibold"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@drawable/line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Turbidez"
+                android:textSize="25sp"
+                android:textColor="@color/md_theme_dark_background"
+                android:fontFamily="@font/signikasemibold"
+
+                />
+
+            <TextView
+                android:id="@+id/datatur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="30sp"
+                android:textColor="@color/md_theme_dark_background"
+                android:fontFamily="@font/signikasemibold"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@drawable/line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperatura"
+                android:textSize="20sp"
+                android:textColor="@color/md_theme_dark_background"
+                android:fontFamily="@font/signikasemibold"
+
+                />
+
+            <TextView
+                android:id="@+id/datatemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="30sp"
+                android:textColor="@color/md_theme_dark_background"
+                android:fontFamily="@font/signikasemibold"
+
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inf"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@drawable/line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Conductividad"
+                android:textSize="18sp"
+                android:textColor="@color/md_theme_dark_background"
+                android:fontFamily="@font/signikasemibold"
+
+                />
+
+            <TextView
+                android:id="@+id/datacond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="30sp"
+                android:textColor="@color/md_theme_dark_background"
+                android:fontFamily="@font/signikasemibold"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@drawable/line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nivel Agua"
+                android:textSize="24sp"
+                android:textColor="@color/md_theme_dark_background"
+                android:fontFamily="@font/signikasemibold"
+
+                />
+
+            <TextView
+                android:id="@+id/dataniv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="30sp"
+                android:textColor="@color/md_theme_dark_background"
+                android:fontFamily="@font/signikasemibold"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@drawable/line">
+
+            <TextView
+                android:id="@+id/fechahora"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16/08/2023 19:02:00"
+                android:textSize="20sp"
+                android:textColor="@color/md_theme_dark_background"
+                android:fontFamily="@font/signikasemibold"
+
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

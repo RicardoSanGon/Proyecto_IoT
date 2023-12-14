@@ -11,7 +11,7 @@ public class Historial_paquete {
     private double datos_sensor_nivel_agua;
     private int user_id;
     private int paquete_id;
-    private LocalDateTime fecha_hora;
+    private String fecha_hora;
 
     public int getId() {
         return id;
@@ -77,11 +77,11 @@ public class Historial_paquete {
         this.paquete_id = paquete_id;
     }
 
-    public LocalDateTime getFecha_hora() {
+    public String getFecha_hora() {
         return fecha_hora;
     }
 
-    public void setFecha_hora(LocalDateTime fecha_hora) {
+    public void setFecha_hora(String fecha_hora) {
         this.fecha_hora = fecha_hora;
     }
 }

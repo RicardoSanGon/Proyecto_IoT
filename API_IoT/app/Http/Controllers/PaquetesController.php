@@ -19,7 +19,7 @@ class PaquetesController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
 
-        protected $aio_key="aio_ZGIL293JFAIvjFGnD6fkLNsdP01K";
+        protected $aio_key="aio_IvxY42djLlmC59j3zATdrbwqvhH0";
         protected $aio_username="ricardo_sanchz";
     public function index(Request $request)
     {
@@ -88,8 +88,8 @@ class PaquetesController extends Controller
     public function setLed(Request $request)
     {
         $response=Http::withHeaders([
-            'X-AIO-Key'=>$this->aio_key
-        ])->post("https://io.adafruit.com/api/v2/{$this->aio_username}/feeds/proyecto-iot.led/data",
+            'X-AIO-Key'=>'aio_qeBY509JfOkTIfM2iAjGY5PztKKr'
+        ])->post("https://io.adafruit.com/api/v2/Ang3L/feeds/proyecto-iot.led/data",
             ['value'=>$request->estado]);
         if($response->successful())
             return response()->json(['msg'=>'Led actualizado con exito'],$response->status());

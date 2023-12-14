@@ -1,11 +1,12 @@
 package com.example.pry_iot.response;
 
-import com.example.pry_iot.model.User;
+import com.example.pry_iot.model.LogInUser;
 
 public class UserResponse {
     private String msg;
     private String token;
-    private User data;
+    private LogInUser data;
+    private String errorType;
 
     public String getMsg() {
         return msg;
@@ -19,10 +20,18 @@ public class UserResponse {
     public void setToken(String token) {
         this.token = token;
     }
-    public User getData() {
+    public LogInUser getData() {
         return data;
     }
-    public void setData(User data) {
+    public void setData(LogInUser data) {
         this.data = data;
+    }
+
+    public String getErrorType() {
+        return errorType;
+    }
+
+    public void setErrorType(String errorType) {
+        this.errorType = errorType;
     }
 }

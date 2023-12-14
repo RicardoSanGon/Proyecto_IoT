@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tvpaquete"
-        android:text="Paquete"
+        android:text=" Paquete"
         android:textSize="30sp"
         android:textColor="@color/md_theme_light_onError"
         android:layout_alignParentTop="true"
@@ -17,6 +17,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:fontFamily="@font/signikabold"
+        android:drawableLeft="@drawable/paquete"
         />
     <TextView
         android:id="@+id/tvlugar"
@@ -30,6 +31,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginStart="20dp"
         android:layout_below="@id/tvpaquete"
+        android:drawableLeft="@drawable/ubi"
         />
     <TextView
         android:id="@+id/tvestado"
